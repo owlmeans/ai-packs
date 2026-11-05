@@ -1,0 +1,105 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "owlmeans",
+  "version": "0.1.21",
+  "description": "Build SaaS applications and AI agents on a specialized AI development pipeline — with the chatbots and data pipelines around them. Start your next project right, or unvibe the one you're stuck with.",
+  "author": {
+    "name": "OwlMeans",
+    "email": "support@owlmeans.com",
+    "url": "https://owlmeans.com"
+  },
+  "homepage": "https://owlmeans.com",
+  "license": "MIT",
+  "keywords": [
+    "saas",
+    "ai-agents",
+    "web-apps",
+    "chatbots",
+    "data-pipelines",
+    "app-builder",
+    "deployment"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "OwlMeans: SaaS and AI Agents",
+        "shortDescription": "Start your next project right",
+        "longDescription": "OwlMeans builds SaaS applications and AI agents, with the chatbots and data pipelines around them, on a specialized AI development pipeline: it turns a plain-language description into a full-stack application (a web interface, an API and a background worker) and keeps developing it one user story at a time. From the conversation you can start a project, review and confirm its specification, plan and implement user stories, check the cloud preview, and publish the application to production with a custom domain, its own users and a GitHub repository. Generation and development run on OwlMeans and spend credits from your OwlMeans account; billing, plans and credit top-ups stay in the OwlMeans web app. Actions that cannot be undone, such as deleting a project, ask for confirmation first.",
+        "developerName": "OwlMeans",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Interactive",
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://owlmeans.com",
+        "supportURL": "https://owlmeans.com/docs/help",
+        "privacyPolicyURL": "https://owlmeans.com/legal/privacy",
+        "termsOfServiceURL": "https://owlmeans.com/legal/terms",
+        "defaultPrompt": [
+          "Start a project for a team task tracker.",
+          "Show my projects and their status.",
+          "Implement the next planned story."
+        ],
+        "brandColor": "#6366F1",
+        "brandColorDark": "#A5B4FC",
+        "composerIcon": "./assets/composer.png",
+        "composerIconDark": "./assets/composer-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List the projects on the account",
+              "prompt": "Show my OwlMeans projects and their status.",
+              "tools_triggered": "list_projects",
+              "expected_behavior": "Lists the projects on the connected account with their current status."
+            },
+            {
+              "description": "Start a project from a description",
+              "prompt": "Start an OwlMeans project for a team task tracker.",
+              "tools_triggered": "create_project",
+              "expected_behavior": "Creates a project draft from the description and summarizes the drafted specification for review."
+            },
+            {
+              "description": "List the stories of a project",
+              "prompt": "What user stories are planned for my task tracker project?",
+              "tools_triggered": "list_projects, list_stories",
+              "expected_behavior": "Finds the project and lists its user stories with their status."
+            },
+            {
+              "description": "Add a user story",
+              "prompt": "Add a story to my task tracker: members can comment on a task.",
+              "tools_triggered": "list_projects, create_story",
+              "expected_behavior": "Adds the user story to the project without starting its implementation."
+            },
+            {
+              "description": "Check the production site",
+              "prompt": "Is my task tracker published to production?",
+              "tools_triggered": "list_projects, production_status",
+              "expected_behavior": "Reports whether the project has a production site and its address."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Buying credits stays in the web app",
+              "prompt": "Top up my OwlMeans balance with 50 dollars."
+            },
+            {
+              "description": "Bulk deletion is not performed without confirmation",
+              "prompt": "Delete all my OwlMeans projects."
+            },
+            {
+              "description": "Running the app on this computer is not available",
+              "prompt": "Run my task tracker on my laptop."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "The plugin does not sell products or process payments. Billing, plans and credit top-ups stay in the OwlMeans web app."
+      }
+    }
+  }
+}

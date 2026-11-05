@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "owlmeans": {
+      "type": "http",
+      "url": "https://api.owlmeans.com/mcp/claude"
+    }
+  }
+}

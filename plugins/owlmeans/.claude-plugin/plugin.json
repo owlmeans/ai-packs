@@ -1,0 +1,27 @@
+{
+  "name": "owlmeans",
+  "displayName": "OwlMeans — SaaS and AI agents",
+  "version": "0.1.21",
+  "description": "Build SaaS applications and AI agents on a specialized AI development pipeline — with the chatbots and data pipelines around them. Start your next project right, or unvibe the one you're stuck with.",
+  "author": {
+    "name": "OwlMeans",
+    "email": "support@owlmeans.com",
+    "url": "https://owlmeans.com"
+  },
+  "homepage": "https://owlmeans.com",
+  "license": "MIT",
+  "keywords": [
+    "saas",
+    "ai-agents",
+    "web-apps",
+    "chatbots",
+    "data-pipelines",
+    "app-builder",
+    "deployment"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://owlmeans.com/docs/mcp",
+  "supportUrl": "https://owlmeans.com/docs/help",
+  "privacyPolicyUrl": "https://owlmeans.com/legal/privacy",
+  "termsOfServiceUrl": "https://owlmeans.com/legal/terms"
+}

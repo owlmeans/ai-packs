@@ -1,0 +1,20 @@
+{
+  "name": "owlmeans",
+  "interface": {
+    "displayName": "OwlMeans"
+  },
+  "plugins": [
+    {
+      "name": "owlmeans-local",
+      "source": {
+        "source": "local",
+        "path": "./codex/owlmeans-local"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "owlmeans": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@owlmeans/viable-claude@0.1.21"
+      ]
+    }
+  }
+}

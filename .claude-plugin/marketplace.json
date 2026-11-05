@@ -1,0 +1,34 @@
+{
+  "name": "owlmeans",
+  "owner": {
+    "name": "OwlMeans",
+    "email": "support@owlmeans.com",
+    "url": "https://owlmeans.com"
+  },
+  "description": "Build SaaS applications and AI agents on a specialized AI development pipeline — with the chatbots and data pipelines around them. Start your next project right, or unvibe the one you're stuck with.",
+  "version": "0.1.21",
+  "plugins": [
+    {
+      "name": "owlmeans",
+      "source": "./plugins/owlmeans",
+      "description": "Build SaaS applications and AI agents on a specialized AI development pipeline — with the chatbots and data pipelines around them. Start your next project right, or unvibe the one you're stuck with.",
+      "category": "development",
+      "tags": [
+        "web-apps",
+        "full-stack",
+        "mcp"
+      ]
+    },
+    {
+      "name": "owlmeans-local",
+      "source": "./plugins/owlmeans-local",
+      "description": "Build SaaS applications and AI agents on a specialized AI development pipeline, written into this workspace — start your next project right, or unvibe the one you're stuck with.",
+      "category": "development",
+      "tags": [
+        "web-apps",
+        "full-stack",
+        "mcp"
+      ]
+    }
+  ]
+}
